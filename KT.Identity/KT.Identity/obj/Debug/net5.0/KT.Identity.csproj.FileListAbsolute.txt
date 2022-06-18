@@ -74,3 +74,12 @@ D:\Web\KT.Identity\KT.Identity\obj\Debug\net5.0\Razor\Views\_ViewImports.cshtml.
 D:\Web\KT.Identity\KT.Identity\obj\Debug\net5.0\KT.Identity.RazorTargetAssemblyInfo.cs
 D:\Web\KT.Identity\KT.Identity\obj\Debug\net5.0\KT.Identity.Views.pdb
 D:\Web\KT.Identity\KT.Identity\obj\Debug\net5.0\Razor\Views\Home\Create.cshtml.g.cs
+D:\Web\KT.Identity\KT.Identity\obj\Debug\net5.0\Razor\Views\Home\GetUserInfo.cshtml.g.cs
+D:\Web\KT.Identity\KT.Identity\obj\Debug\net5.0\Razor\Views\Home\SignIn.cshtml.g.cs
+D:\Web\KT.Identity\KT.Identity\obj\Debug\net5.0\Razor\Views\Home\AdminPanel.cshtml.g.cs
+D:\Web\KT.Identity\KT.Identity\obj\Debug\net5.0\Razor\Views\Home\MemberPanel.cshtml.g.cs
+D:\Web\KT.Identity\KT.Identity\obj\Debug\net5.0\Razor\Views\Home\AccessDenied.cshtml.g.cs
+D:\Web\KT.Identity\KT.Identity\obj\Debug\net5.0\Razor\Views\User\Index.cshtml.g.cs
+D:\Web\KT.Identity\KT.Identity\obj\Debug\net5.0\Razor\Views\User\Create.cshtml.g.cs
+D:\Web\KT.Identity\KT.Identity\obj\Debug\net5.0\Razor\Views\Role\Index.cshtml.g.cs
+D:\Web\KT.Identity\KT.Identity\obj\Debug\net5.0\Razor\Views\Role\Create.cshtml.g.cs

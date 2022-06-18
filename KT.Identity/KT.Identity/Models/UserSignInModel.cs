@@ -12,5 +12,6 @@ namespace KT.Identity.Models
         public string Username { get; set; }
         [Required(ErrorMessage = "Parola Gereklidir.")]
         public string Password { get; set; }
+        public bool RememberMe { get; set; }
     }
 }

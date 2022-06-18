@@ -13,14 +13,21 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
 #nullable restore
-#line 2 "D:\Web\KT.Identity\KT.Identity\Views\_ViewImports.cshtml"
+#line 3 "D:\Web\KT.Identity\KT.Identity\Views\_ViewImports.cshtml"
 using KT.Identity.Models;
 
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 4 "D:\Web\KT.Identity\KT.Identity\Views\_ViewImports.cshtml"
+using KT.Identity.Entities;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"7eb507ec616e9f3a2fcdd412e059121e4d5bb21d", @"/Views/Home/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"613068c8a50443696cd9d3d7a152371b8a8c3db9", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"12abf76f97fa2315247f5c33f8bafb605f2cd039", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

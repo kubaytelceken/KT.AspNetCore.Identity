@@ -1,7 +1,9 @@
 using KT.Identity.Context;
+using KT.Identity.CustomDescriber;
 using KT.Identity.Entities;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -28,15 +30,25 @@ namespace KT.Identity
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddIdentity<AppUser, AppRole>(opt => {
+                opt.Lockout.MaxFailedAccessAttempts = 3;
                 opt.Password.RequireDigit = false;
                 opt.Password.RequiredLength = 1;
                 opt.Password.RequireLowercase = false;
                 opt.Password.RequireUppercase = false;
                 opt.Password.RequireNonAlphanumeric = false;
-                opt.SignIn.RequireConfirmedEmail = true;
-            }).AddEntityFrameworkStores<KTContext>();
+                opt.SignIn.RequireConfirmedEmail = false;
+            }).AddErrorDescriber<CustomErrorDescriber>().AddEntityFrameworkStores<KTContext>();
 
-
+            services.ConfigureApplicationCookie(opt =>
+            {
+                opt.Cookie.HttpOnly = true;
+                opt.Cookie.SameSite = SameSiteMode.Strict;
+                opt.Cookie.SecurePolicy = CookieSecurePolicy.SameAsRequest;
+                opt.Cookie.Name = "AspIdentityCookie";
+                opt.ExpireTimeSpan = TimeSpan.FromDays(25);
+                opt.LoginPath = new PathString("/Home/SignIn");
+                opt.AccessDeniedPath = new PathString("/Home/AccessDenied");
+            });
 
 
             services.AddDbContext<KTContext>(opt =>
@@ -65,6 +77,7 @@ namespace KT.Identity
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
